@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1003070183939",
+    "firebase_url": "https://optiprep-a1b58-default-rtdb.firebaseio.com",
+    "project_id": "optiprep-a1b58",
+    "storage_bucket": "optiprep-a1b58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003070183939:android:11e28c8c7ef8515744cc36",
+        "android_client_info": {
+          "package_name": "com.optiprep.optiprep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003070183939-ru1q5rtsnqn3lkae2rvjk316e1dtceak.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.optiprep.optiprep",
+            "certificate_hash": "e2f6f3f9078a241bfe8336b1157a790bf655ca5e"
+          }
+        },
+        {
+          "client_id": "1003070183939-e4res266bkd0u9aprv45a8qjctfms1jt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbESaKpxCtu-EtlWeYO7tLfR8MuKmj-Bo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003070183939-e4res266bkd0u9aprv45a8qjctfms1jt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

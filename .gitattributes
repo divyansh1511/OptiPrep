@@ -1,0 +1,5 @@
+# Set the default behavior for line endings
+* text=auto
+
+# Explicitly declare files that should have CRLF line endings on checkout.
+*.metadata text eol=crlf
