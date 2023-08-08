@@ -1,6 +1,10 @@
 # optiprep
 
 A new Flutter project.
+![screencapture-localhost-54567-2023-08-08-17_11_59](https://github.com/divyansh1511/OptiPrep/assets/75711789/ee928ff5-cadd-4bda-8a3f-3e76249f2887)
+
+![screencapture-localhost-54765-2023-08-08-17_15_14](https://github.com/divyansh1511/OptiPrep/assets/75711789/97790a8e-99d7-44f5-b337-6fb851077554)
+
 
 ## Getting Started
 
