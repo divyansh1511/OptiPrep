@@ -51,12 +51,14 @@ class _ProblemListScreenState extends State<ProblemListScreen> {
                   const SizedBox(
                     width: 30,
                   ),
-                  Text(
-                    widget.topic_,
-                    style: const TextStyle(
-                        color: Colors.amber,
-                        fontSize: 60,
-                        fontWeight: FontWeight.bold),
+                  Expanded(
+                    child: Text(
+                      widget.topic_,
+                      style: const TextStyle(
+                          color: Colors.amber,
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold),
+                    ),
                   )
                 ],
               ),

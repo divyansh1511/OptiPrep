@@ -125,7 +125,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 child: Row(
                   children: [
                     const SizedBox(
-                      width: 40,
+                      width: 20,
                     ),
                     SubjectCardWidget("Operating System", Colors.greenAccent,
                         "assets/card3.jpg", tmp),
@@ -162,7 +162,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 child: Row(
                   children: const [
                     SizedBox(
-                      width: 80,
+                      width: 30,
                     ),
                     CardWidget("Arrays", Colors.amber,
                         "An array is a data structure consisting of a collection of elements, of same memory size, each identified by at least one array index or key."),
@@ -205,7 +205,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 child: Row(
                   children: const [
                     SizedBox(
-                      width: 80,
+                      width: 30,
                     ),
                     CompanyCardWidget("Google", Colors.deepOrangeAccent),
                     CompanyCardWidget("Amazon", Colors.grey),

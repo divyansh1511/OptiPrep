@@ -10,6 +10,7 @@ import 'package:optiprep/dashboard/ui/dashboard.dart';
 import 'package:optiprep/welcome_page/widgets_used/bouncing_image.dart';
 
 import '../used_widget/slide_transition.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -54,7 +55,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 child: Text(state.error_msg),
               );
             } else {
-              double screenwidth = MediaQuery.of(context).size.width;
+              // double screenwidth = MediaQuery.of(context).size.width;
               return Row(
                 children: [
                   Expanded(
@@ -148,7 +149,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                   }
                                 },
                               ),
-                              if (screenwidth < 600)
+                              if (!kIsWeb)
                                 TextButton(
                                   onPressed: () {
                                     Navigator.push(
@@ -164,7 +165,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                     ),
                   ),
-                  if (screenwidth > 600)
+                  if (kIsWeb)
                     Expanded(
                       flex: 1,
                       child: Container(

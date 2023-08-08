@@ -1,3 +1,4 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:optiprep/authentication/ui/di/authentication_di.dart';
@@ -29,7 +30,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const WelcomePage(),
+      home: AnimatedSplashScreen(
+          splashTransition: SplashTransition.scaleTransition,
+          splash: const Icon(
+            Icons.home,
+            size: 60,
+          ),
+          nextScreen: const WelcomePage()),
       // home: ResultScreen(score: 10, totalproblems: 20),
     );
   }

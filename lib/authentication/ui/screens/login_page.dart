@@ -11,6 +11,7 @@ import 'package:optiprep/dashboard/ui/dashboard.dart';
 
 import '../../../welcome_page/widgets_used/bouncing_image.dart';
 import '../cubit/login_state.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -126,10 +127,10 @@ class _LoginPageState extends State<LoginPage> {
                 child: Text(state.error_msg),
               );
             } else {
-              double screenwidth = MediaQuery.of(context).size.width;
+              // double screenwidth = MediaQuery.of(context).size.width;
               return Row(
                 children: [
-                  if (screenwidth > 600)
+                  if (kIsWeb)
                     Expanded(
                       flex: 1,
                       child: Container(
@@ -300,7 +301,7 @@ class _LoginPageState extends State<LoginPage> {
                               const SizedBox(
                                 height: 10,
                               ),
-                              if (screenwidth < 600)
+                              if (!kIsWeb)
                                 TextButton(
                                   onPressed: () {
                                     Navigator.push(

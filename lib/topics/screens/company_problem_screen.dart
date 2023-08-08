@@ -50,13 +50,22 @@ class _ProblemListScreenState extends State<CompanyProblemListScreen> {
                   const SizedBox(
                     width: 30,
                   ),
-                  Text(
-                    widget.topic_,
-                    style: const TextStyle(
-                        color: Colors.amber,
-                        fontSize: 60,
-                        fontWeight: FontWeight.bold),
-                  )
+                  GestureDetector(
+                    onTap: () {
+                      showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return CustomPopupWidget(title: widget.topic_);
+                          });
+                    },
+                    child: Text(
+                      widget.topic_,
+                      style: const TextStyle(
+                          color: Colors.amber,
+                          fontSize: 60,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -215,6 +224,47 @@ class CompanyProblemListWidget extends StatelessWidget {
           );
         }
       },
+    );
+  }
+}
+
+class CustomPopupWidget extends StatelessWidget {
+  final String title;
+  const CustomPopupWidget({super.key, required this.title});
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        alignment: Alignment.topCenter,
+        margin: EdgeInsets.only(top: 100),
+        child: Card(
+          elevation: 4,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text(
+                  'Advisory!!',
+                  style: TextStyle(
+                      color: Colors.teal, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 8),
+                Text(
+                    'You should have a good grip on basics of data structure for attempting the problem set for ${title}.'),
+                const SizedBox(height: 16),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: Text('Close'),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -1,11 +1,11 @@
 import 'dart:math';
-
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:confetti/confetti.dart';
 
 import '../../core/Inherited_Widget_uid.dart';
 import '../impl/firebase/test_services.dart';
+
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class ResultScreen extends StatefulWidget {
   final int score;
@@ -94,7 +94,7 @@ class _ResultScreenState extends State<ResultScreen> {
                 ),
               ],
             ),
-            if (scwidth > 600)
+            if (kIsWeb)
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [

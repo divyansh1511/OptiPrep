@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:optiprep/welcome_page/widgets_used/bouncing_image.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class AboutPagePart2 extends StatelessWidget {
   final bool isImageVisible;
@@ -17,7 +18,7 @@ class AboutPagePart2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double scwidth = MediaQuery.of(context).size.width;
+    // double scwidth = MediaQuery.of(context).size.width;
     return Row(
       children: [
         Expanded(
@@ -66,7 +67,7 @@ class AboutPagePart2 extends StatelessWidget {
             ),
           ),
         ),
-        if (scwidth > 600)
+        if (kIsWeb)
           Expanded(
             flex: 1,
             child: AnimatedOpacity(
