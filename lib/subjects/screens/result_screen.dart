@@ -63,34 +63,29 @@ class _ResultScreenState extends State<ResultScreen> {
         ),
         child: Stack(
           children: [
-            Row(
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Expanded(
-                      child: Text(
-                        "Here's your Result for the test",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 40,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 40,
-                    ),
-                    Expanded(
-                      child: Text(
-                        "${widget.score} / ${widget.totalproblems}",
-                        style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 60,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ],
+                const Expanded(
+                  child: Text(
+                    "Here's your Result for the test",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                Expanded(
+                  child: Text(
+                    "${widget.score} / ${widget.totalproblems}",
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 60,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ],
             ),
