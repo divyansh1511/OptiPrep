@@ -32,10 +32,7 @@ class MyApp extends StatelessWidget {
       ),
       home: AnimatedSplashScreen(
           splashTransition: SplashTransition.scaleTransition,
-          splash: const Icon(
-            Icons.home,
-            size: 60,
-          ),
+          splash: Image.asset("assets/logo.png"),
           nextScreen: const WelcomePage()),
       // home: ResultScreen(score: 10, totalproblems: 20),
     );

@@ -97,12 +97,12 @@ class WelcomePagePart1 extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 30,
                 ),
-                ArrowAnimation(),
-                const SizedBox(
-                  height: 20,
-                ),
+                // ArrowAnimation(),
+                // const SizedBox(
+                //   height: 20,
+                // ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

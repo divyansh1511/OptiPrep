@@ -389,7 +389,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                             ],
                                           ),
                                         ),
-                                        // SizedBox(width: 24),
+                                        SizedBox(width: 10),
                                         Expanded(
                                           flex: 1,
                                           child: Column(
@@ -403,6 +403,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                 style: const TextStyle(
                                                   fontSize: 36,
                                                   fontWeight: FontWeight.bold,
+                                                  color: Colors.white70,
                                                 ),
                                                 maxLines: 1,
                                                 overflow: TextOverflow.ellipsis,
@@ -428,12 +429,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                               const SizedBox(
-                                                height: 16,
+                                                height: 20,
                                               ),
                                               AnimatedButton(
                                                 width: 300,
                                                 height: 40,
-                                                text: "Change Password",
+                                                text: "Reset Password",
                                                 // "Get Your Account ${String.fromCharCode(myIcon.codePoint)}",
                                                 backgroundColor:
                                                     const Color.fromRGBO(
