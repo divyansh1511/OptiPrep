@@ -39,7 +39,11 @@ class _WebsiteButtonState extends State<WebsiteButton> {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
       onPressed: _launchWebsite,
-      child: const Text('Go to problem'),
+      child: const Text(
+        'Go to problem',
+        maxLines: 2,
+        overflow: TextOverflow.ellipsis,
+      ),
     );
   }
 }

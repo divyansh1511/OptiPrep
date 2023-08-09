@@ -25,7 +25,6 @@ class _ProblemListScreenState extends State<CompanyProblemListScreen> {
             Text(
               "Hey User!",
             ),
-            Icon(Icons.account_circle_outlined),
           ],
         ),
       ),
