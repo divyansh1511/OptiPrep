@@ -5,6 +5,7 @@ import 'package:optiprep/authentication/ui/cubit/sign_up_cubit.dart';
 import 'package:optiprep/authentication/ui/cubit/sign_up_state.dart';
 import 'package:optiprep/authentication/ui/screens/login_page.dart';
 import 'package:optiprep/authentication/ui/used_widget/text_form_widget.dart';
+import 'package:optiprep/authentication/ui/used_widget/typing_word_animation.dart';
 import 'package:optiprep/core/Inherited_Widget_uid.dart';
 import 'package:optiprep/dashboard/ui/dashboard.dart';
 import 'package:optiprep/welcome_page/widgets_used/bouncing_image.dart';
@@ -68,18 +69,24 @@ class _SignUpPageState extends State<SignUpPage> {
                           child: Column(
                             children: [
                               const SizedBox(
-                                height: 25,
+                                height: 40,
                               ),
                               Row(
-                                children: const [
-                                  Text(
-                                    "Welcome!",
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 60,
-                                    ),
+                                children: [
+                                  TypingAnimation(
+                                    text: "Welcome!",
+                                    size: 60,
+                                    boldornot: true,
+                                    font_color: Colors.black,
                                   ),
+                                  // Text(
+                                  //   "Welcome!",
+                                  //   style: TextStyle(
+                                  //     color: Colors.black,
+                                  //     fontWeight: FontWeight.bold,
+                                  //     fontSize: 60,
+                                  //   ),
+                                  // ),
                                 ],
                               ),
                               const SizedBox(
@@ -159,6 +166,9 @@ class _SignUpPageState extends State<SignUpPage> {
                                   },
                                   child: Text("Already Have an account?"),
                                 ),
+                              const SizedBox(
+                                height: 30,
+                              ),
                             ],
                           ),
                         ),

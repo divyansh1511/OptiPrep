@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
+import 'package:optiprep/authentication/ui/used_widget/typing_word_animation.dart';
 
 import '../../about_page/ui/about_page.dart';
 import '../../authentication/ui/screens/login_page.dart';
@@ -69,15 +70,13 @@ class WelcomeMobilePage extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Text(
-                    "Ace your way to success...",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold),
-                  ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: TypingAnimation(
+                      text: "Ace your way to success...",
+                      size: 40,
+                      boldornot: true,
+                      font_color: Colors.white),
                 ),
                 const Padding(
                   padding: EdgeInsets.all(16.0),

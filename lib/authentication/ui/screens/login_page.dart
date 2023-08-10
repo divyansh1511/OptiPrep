@@ -6,6 +6,7 @@ import 'package:optiprep/authentication/ui/cubit/login_cubit.dart';
 import 'package:optiprep/authentication/ui/screens/sign_up_page.dart';
 import 'package:optiprep/authentication/ui/used_widget/slide_transition.dart';
 import 'package:optiprep/authentication/ui/used_widget/text_form_widget.dart';
+import 'package:optiprep/authentication/ui/used_widget/typing_word_animation.dart';
 import 'package:optiprep/core/Inherited_Widget_uid.dart';
 import 'package:optiprep/dashboard/ui/dashboard.dart';
 
@@ -211,14 +212,20 @@ class _LoginPageState extends State<LoginPage> {
                                 height: 15,
                               ),
                               Row(
-                                children: const [
-                                  Text(
-                                    "Get to your account...",
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 30,
-                                    ),
+                                children: [
+                                  TypingAnimation(
+                                    text: "Get to your account...",
+                                    size: 30,
+                                    boldornot: false,
+                                    font_color: Colors.black,
                                   ),
+                                  // Text(
+                                  //   "Get to your account...",
+                                  //   style: TextStyle(
+                                  //     color: Colors.black,
+                                  //     fontSize: 30,
+                                  //   ),
+                                  // ),
                                 ],
                               ),
                               const SizedBox(
