@@ -39,14 +39,14 @@ class _TypingAnimationState extends State<TypingAnimation> {
           currentIndex++;
         });
       } else {
-        timer.cancel(); // Animation finished, cancel the timer
+        timer.cancel();
       }
     });
   }
 
   @override
   void dispose() {
-    _timer.cancel(); // Cancel the timer when the widget is disposed
+    _timer.cancel();
     super.dispose();
   }
 

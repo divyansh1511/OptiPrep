@@ -47,49 +47,51 @@ class _LoginPageState extends State<LoginPage> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
           ),
-          child: Container(
-            height: MediaQuery.of(context).size.height * 0.4,
-            width: MediaQuery.of(context).size.width * 0.6,
-            child: Column(
-              children: [
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  "Send the request for password change",
-                  style: TextStyle(fontSize: 40, color: Colors.teal),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                CustomTextFormField(
-                    labelText: "Email Address",
-                    controller_: reset_email_controller),
-                const SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    ElevatedButton(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.4,
+              width: MediaQuery.of(context).size.width * 0.6,
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    "Send the request for password change",
+                    style: TextStyle(fontSize: 30, color: Colors.teal),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  CustomTextFormField(
+                      labelText: "Email Address",
+                      controller_: reset_email_controller),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.redAccent),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text("Cancel")),
+                      ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.redAccent),
+                            backgroundColor: Colors.teal),
                         onPressed: () {
+                          _resetPassword();
                           Navigator.of(context).pop();
                         },
-                        child: const Text("Cancel")),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.teal),
-                      onPressed: () {
-                        _resetPassword();
-                        Navigator.of(context).pop();
-                      },
-                      child: const Text("Submit"),
-                    ),
-                  ],
-                ),
-              ],
+                        child: const Text("Submit"),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         );
