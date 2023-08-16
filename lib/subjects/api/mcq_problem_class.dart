@@ -1,3 +1,8 @@
+// This is format for the MCQ cards screen in UI
+// Every MCQ problem is the below format
+
+// note that indexing start from zero
+
 class MCQProblem {
   String statement;
   List<String> options;

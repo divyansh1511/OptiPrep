@@ -6,6 +6,11 @@ class SignUpRepositoryImpl extends SignUpRepository {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
+  // This method creates a new entity to the database for new users
+  //
+  // This method initiates all the fields which could further be used by the
+  // user like profile picture and scores.
+
   Future<bool> signupWithDetails(
       String email, String password, String name, String phone_number) async {
     try {

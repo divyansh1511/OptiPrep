@@ -2,6 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:optiprep/authentication/api/login_interactor.dart';
+import 'package:optiprep/authentication/impl/login_interactor_impl.dart';
 import 'package:optiprep/authentication/ui/cubit/login_cubit.dart';
 import 'package:optiprep/authentication/ui/screens/sign_up_page.dart';
 import 'package:optiprep/authentication/ui/used_widget/slide_transition.dart';
@@ -102,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => LoginCubit(),
+      create: (context) => LoginCubit(FirebaseAuth.instance),
       child: Scaffold(
         body: BlocConsumer<LoginCubit, LoginStates>(
           listener: (context, state) {

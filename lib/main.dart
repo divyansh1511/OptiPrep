@@ -6,6 +6,11 @@ import 'package:optiprep/welcome_page/welcome_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initializing the app
+  // APIKey : For Authentication Purpose
+  // storageBucket : For storing the data like scores , images , profile info
+
   await Firebase.initializeApp(
       options: const FirebaseOptions(
     apiKey: "AIzaSyCAtKJ9IBNCrcGkna0JccduqtSzyHB0lrM",
@@ -21,7 +26,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  // This widget is the root of the application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -18,6 +18,9 @@ class _WelcomePageState extends State<WelcomePage> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         color: const Color.fromRGBO(0, 128, 128, 1),
+
+        // Two Different pages for different screen (Web and Mobile)
+
         child: kIsWeb ? const WelcomePagePart1() : const WelcomeMobilePage(),
       ),
     );
