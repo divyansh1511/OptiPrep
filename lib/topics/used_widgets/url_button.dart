@@ -22,6 +22,13 @@ class _WebsiteButtonState extends State<WebsiteButton> {
     }
   }
 
+  Future<void> _launchUrl() async {
+    final Uri _url = Uri.parse(widget.websiteUrl);
+    if (!await launchUrl(_url)) {
+      throw Exception('Could not launch ${widget.websiteUrl}');
+    }
+  }
+
   // void _openWebsiteInIframe() async {
   //   if (await canLaunch(widget.websiteUrl)) {
   //     if (html.window != null && html.window.location != null) {
@@ -38,7 +45,7 @@ class _WebsiteButtonState extends State<WebsiteButton> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-      onPressed: _launchWebsite,
+      onPressed: _launchUrl,
       child: const Text(
         'Go to problem',
         maxLines: 2,

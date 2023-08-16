@@ -508,9 +508,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                   final quizScores = (ud['quiz_scores'] as List<dynamic>)
                       .cast<Map<String, dynamic>>();
+                  print(quizScores.length);
 
                   return Container(
-                    height: MediaQuery.of(context).size.height * 0.5,
+                    // height: MediaQuery.of(context).size.height * 0.7,
                     child: ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),

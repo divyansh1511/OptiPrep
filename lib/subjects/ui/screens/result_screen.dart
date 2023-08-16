@@ -1,9 +1,10 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:confetti/confetti.dart';
+import 'package:optiprep/subjects/impl/firebase/test_interactor_impl.dart';
 
-import '../../core/Inherited_Widget_uid.dart';
-import '../impl/firebase/test_services.dart';
+import '../../../core/Inherited_Widget_uid.dart';
+import '../../impl/firebase/test_services.dart';
 
 import 'package:flutter/foundation.dart' show kIsWeb;
 
@@ -47,7 +48,8 @@ class _ResultScreenState extends State<ResultScreen> {
   Widget build(BuildContext context) {
     MyInheritedWidget? userData = MyInheritedWidget.of(context);
     String UserId = userData!.uid;
-    storeQuizScore(UserId, widget.quizname, widget.score, widget.totalproblems);
+    TestInteractorImpl().storeScore(
+        UserId, widget.quizname, widget.score, widget.totalproblems);
     double scwidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Container(

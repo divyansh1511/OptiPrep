@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:optiprep/subjects/screens/result_screen.dart';
-import '../../core/Inherited_Widget_uid.dart';
-import '../api/mcq_problem_class.dart';
+import 'package:optiprep/subjects/ui/screens/result_screen.dart';
+import '../../../core/Inherited_Widget_uid.dart';
+import '../../api/mcq_problem_class.dart';
 
 class MCQScreen extends StatefulWidget {
   List<MCQProblem> listneeded;

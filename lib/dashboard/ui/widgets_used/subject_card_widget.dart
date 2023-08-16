@@ -7,7 +7,7 @@ import 'package:optiprep/subjects/impl/lists/os_list.dart';
 import 'package:optiprep/subjects/impl/lists/sd_list.dart';
 
 import '../../../subjects/impl/lists/oops_list.dart';
-import '../../../subjects/screens/mcq_screen.dart';
+import '../../../subjects/ui/screens/mcq_screen.dart';
 
 // class SubjectCardWidget extends StatelessWidget {
 //   final String title;
