@@ -11,7 +11,7 @@ class SignUpInteractorImpl extends SignUpInteractor {
     final _signUpInteractor =
         AuthenticationDi().getValueRepo('signupRepo') as SignUpRepository;
 
-    return await _signUpInteractor.signup_with_details(
+    return await _signUpInteractor.signupWithDetails(
         email, password, name, phone_number);
   }
 }

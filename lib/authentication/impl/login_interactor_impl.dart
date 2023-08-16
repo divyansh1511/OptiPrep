@@ -12,6 +12,6 @@ class LoginInteractorImpl extends LoginInteractor {
     final loginrepo =
         AuthenticationDi().getValueRepo('loginRepo') as LoginRepository;
 
-    return await loginrepo.logging_using_email_pass(email, password);
+    return await loginrepo.loggingUsingEmailPassword(email, password);
   }
 }

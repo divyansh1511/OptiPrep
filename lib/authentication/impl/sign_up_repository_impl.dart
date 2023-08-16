@@ -6,7 +6,7 @@ class SignUpRepositoryImpl extends SignUpRepository {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-  Future<bool> signup_with_details(
+  Future<bool> signupWithDetails(
       String email, String password, String name, String phone_number) async {
     try {
       UserCredential userCredential =
