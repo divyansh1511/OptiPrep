@@ -4,12 +4,20 @@ import 'package:firebase_auth/firebase_auth.dart';
 class FireStoreProfileServices {
   static final FirebaseFirestore firestore = FirebaseFirestore.instance;
 
+  // This method returns the complete info about the user
+  //
+  // After passing the unique id for the user.
+
   static getUser(uid) {
     return firestore
         .collection("users")
         .where('id', isEqualTo: uid)
         .snapshots();
   }
+
+  // This method updates the password for the user
+  //
+  // For Authentication as well as in database.
 
   static changeAuthPassword({email, password, newpassword, uid}) async {
     User? currentUser = FirebaseAuth.instance.currentUser;
@@ -28,6 +36,10 @@ class FireStoreProfileServices {
     );
   }
 
+  // This method is to update the user details
+  // Mobile Number and Name
+  // using uid
+
   static UpdateUserValue({name, phone_number, uid}) async {
     await FirebaseFirestore.instance.collection('users').doc(uid).set(
       {
@@ -37,6 +49,8 @@ class FireStoreProfileServices {
       SetOptions(merge: true),
     );
   }
+
+  // The method is to get the current user out of the app.
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
