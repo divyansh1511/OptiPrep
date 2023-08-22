@@ -104,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => LoginCubit(FirebaseAuth.instance),
+      create: (context) => LoginCubit(),
       child: Scaffold(
         body: BlocConsumer<LoginCubit, LoginStates>(
           listener: (context, state) {

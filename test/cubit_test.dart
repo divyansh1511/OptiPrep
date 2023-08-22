@@ -28,15 +28,15 @@ void main() {
     late MockFirebaseAuth mockFirebaseAuth;
     late MockParentInteractor mockParentInteractor;
 
-    setUp(() {
+    setUpAll(() {
       mockFirebaseAuth = MockFirebaseAuth();
       mockParentInteractor = MockParentInteractor();
-      loginCubit = LoginCubit(mockFirebaseAuth);
+      loginCubit = LoginCubit();
     });
 
-    tearDown(() {
-      loginCubit.close();
-    });
+    // tearDown(() {
+    //   loginCubit.close();
+    // });
 
     test('initial state is LoginInitialState', () {
       // print('Initial state: ${loginCubit.state}');

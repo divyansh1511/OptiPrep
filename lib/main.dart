@@ -2,7 +2,9 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:optiprep/authentication/ui/di/authentication_di.dart';
+import 'package:optiprep/screen_loading_animation.dart';
 import 'package:optiprep/welcome_page/welcome_page.dart';
+import 'package:optiprep/welcome_page/widgets_used/draggable_Widget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,11 +37,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AnimatedSplashScreen(
-          splashTransition: SplashTransition.scaleTransition,
-          splash: Image.asset("assets/logo.png"),
-          nextScreen: const WelcomePage()),
-      // home: ResultScreen(score: 10, totalproblems: 20),
+      // home: AnimatedSplashScreen(
+      //   splashTransition: SplashTransition.scaleTransition,
+      //   splash: Image.asset("assets/logo.png"),
+      //   nextScreen: AnimatedLinesScreen(),
+      // ),
+      home: AnimatedLinesScreen(),
     );
   }
 }

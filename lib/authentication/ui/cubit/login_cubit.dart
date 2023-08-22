@@ -3,21 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:optiprep/authentication/api/login_interactor.dart';
 import 'package:optiprep/authentication/impl/firebase_authentication.dart';
+import 'package:optiprep/authentication/impl/login_interactor_impl.dart';
 import 'package:optiprep/authentication/ui/di/authentication_di.dart';
 import 'package:optiprep/core/parent_interactor.dart';
 
 import 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginStates> {
-  final FirebaseAuth _auth;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   // final ParentInteractor _parentInteractor;
 
-  LoginCubit(this._auth) : super(LoginInitialState());
+  LoginCubit() : super(LoginInitialState());
 
   Future<bool> login(String email, String password) async {
     try {
       emit(LoginLoadingState());
-      // final interactor = _parentInteractor as LoginInteractor;
+      // LoginInteractor interactor = LoginInteractorImpl();
       final interactor =
           AuthenticationDi().getValue('login') as LoginInteractor;
       bool tmp = await interactor.login(email, password);

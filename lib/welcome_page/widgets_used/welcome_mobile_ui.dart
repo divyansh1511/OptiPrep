@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:optiprep/authentication/ui/used_widget/typing_word_animation.dart';
+import 'package:optiprep/welcome_page/widgets_used/draggable_Widget.dart';
 
 import '../../about_page/ui/about_page.dart';
 import '../../authentication/ui/screens/login_page.dart';
@@ -134,6 +135,22 @@ class WelcomeMobilePage extends StatelessWidget {
             ),
           ],
         ),
+        // Column(
+        //   children: [
+        //     const SizedBox(
+        //       height: 470,
+        //     ),
+        //     Padding(
+        //       padding: const EdgeInsets.all(8.0),
+        //       child: Row(
+        //         mainAxisAlignment: MainAxisAlignment.center,
+        //         children: [
+        //           DraggableButton(),
+        //         ],
+        //       ),
+        //     ),
+        //   ],
+        // ),
         Column(
           children: [
             const SizedBox(

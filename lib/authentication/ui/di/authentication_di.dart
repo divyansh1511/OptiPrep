@@ -11,26 +11,38 @@ import '../../api/login_interactor.dart';
 import '../../api/login_repository.dart';
 import '../../impl/login_interactor_impl.dart';
 
+// class AuthenticationDi {
+//   static final Map<String, dynamic> value = {};
+//
+//   static void setValue(ParentInteractor interactor, String key) {
+//     value[key] = interactor;
+//   }
+//
+//   ParentInteractor getValue(String key) {
+//     return value[key];
+//   }
+//
+//   static void setValueRepo(ParentRepository repository, String key) {
+//     value[key] = repository;
+//   }
+//
+//   ParentRepository getValueRepo(String key) {
+//     return value[key];
+//   }
+// }
+
 class AuthenticationDi {
-  static final Map<String, dynamic> value = {};
+  static final AuthenticationDi _instance = AuthenticationDi._();
 
-  // static void setValue(LoginInteractor loginInteractor, String key) {
-  //   value[key] = loginInteractor;
-  // }
-  //
-  // static void setValueSignup(SignUpInteractor signUpInteractor, String key) {
-  //   value[key] = signUpInteractor;
-  // }
-  //
-  // LoginInteractor getValue(String key) {
-  //   return value[key];
-  // }
-  //
-  // SignUpInteractor getvalueSignup(String key) {
-  //   return value[key];
-  // }
+  factory AuthenticationDi() {
+    return _instance;
+  }
 
-  static void setValue(ParentInteractor interactor, String key) {
+  AuthenticationDi._(); // Private constructor
+
+  final Map<String, dynamic> value = {};
+
+  void setValue(ParentInteractor interactor, String key) {
     value[key] = interactor;
   }
 
@@ -38,7 +50,7 @@ class AuthenticationDi {
     return value[key];
   }
 
-  static void setValueRepo(ParentRepository repository, String key) {
+  void setValueRepo(ParentRepository repository, String key) {
     value[key] = repository;
   }
 
@@ -48,9 +60,11 @@ class AuthenticationDi {
 }
 
 void initializer() {
-  AuthenticationDi.setValue(LoginInteractorImpl(), 'login');
-  AuthenticationDi.setValue(SignUpInteractorImpl(), 'signup');
-  AuthenticationDi.setValueRepo(LoginRepositoryImpl(), 'loginRepo');
-  AuthenticationDi.setValueRepo(SignUpRepositoryImpl(), 'signupRepo');
+  final authenticationDi = AuthenticationDi();
+
+  authenticationDi.setValue(LoginInteractorImpl(), 'login');
+  authenticationDi.setValue(SignUpInteractorImpl(), 'signup');
+  authenticationDi.setValueRepo(LoginRepositoryImpl(), 'loginRepo');
+  authenticationDi.setValueRepo(SignUpRepositoryImpl(), 'signupRepo');
   TestDi.setValue(TestRepositoryImpl(), 'StoreScore');
 }
